@@ -12,7 +12,7 @@ class PublisherNode(Node):
 
         self.pub_float = self.create_publisher(Float32,topic1,10)
 
-        self.period = 0.0166667
+        self.period = 1.0/60.0
         self.timer = self.create_timer(self.period,self.callback_fun)
         self.value = 0
     def callback_fun(self):
